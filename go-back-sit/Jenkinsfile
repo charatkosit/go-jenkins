@@ -12,7 +12,7 @@ pipeline {
                 echo 'prepare build'
                 git branch: 'main', url: 'https://github.com/charatkosit/go-back.git'
                 sh '. /home/ec2-user/script/back/envBackWithSIT.sh'
-                sh 'curl -X POST -H "Authorization: Bearer ${tokenLineB}" -F "message=Prepare Code OK" https://notify-api.line.me/api/notify'
+                sh 'curl -X POST -H "Authorization: Bearer ${tokenLineB}" -F "message=SIT prepare Code OK" https://notify-api.line.me/api/notify'
             }
         }
         
@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo 'Build Docker step'
                 sh '. /home/ec2-user/script/back/build-back-sit.sh'
-                sh 'curl -X POST -H "Authorization: Bearer ${tokenLineB}" -F "message=Build Code OK" https://notify-api.line.me/api/notify'
+                sh 'curl -X POST -H "Authorization: Bearer ${tokenLineB}" -F "message=SIT build Code OK" https://notify-api.line.me/api/notify'
                
                 
                 
@@ -31,7 +31,7 @@ pipeline {
                 echo 'Testing..'
                 sh 'docker login -u "charat" -p "Do#5898791"'
                 sh '. /home/ec2-user/script/back/dockerPush-back-sit.sh'
-                sh 'curl -X POST -H "Authorization: Bearer ${tokenLineB}" -F "message=Push DockerHub OK" https://notify-api.line.me/api/notify'
+                sh 'curl -X POST -H "Authorization: Bearer ${tokenLineB}" -F "message=SIT push DockerHub OK" https://notify-api.line.me/api/notify'
 
                
             }

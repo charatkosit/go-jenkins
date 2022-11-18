@@ -13,7 +13,7 @@ pipeline {
                 echo 'prepare build'
                 git branch: 'main', url: 'https://github.com/charatkosit/go-template.git'
                 sh '. /home/ec2-user/script/front/envFrontWithUAT.sh'
-                sh 'curl -X POST -H "Authorization: Bearer ${tokenLineF}" -F "message=Prepare Cohde" https://notify-api.line.me/api/notify'
+                sh 'curl -X POST -H "Authorization: Bearer ${tokenLineF}" -F "message=UAT prepare Code OK" https://notify-api.line.me/api/notify'
             }
         }
         
@@ -21,7 +21,7 @@ pipeline {
             steps {
                 echo 'Build Docker step'
                 sh '. /home/ec2-user/script/front/build-front-uat.sh'
-                sh 'curl -X POST -H "Authorization: Bearer ${tokenLineF}" -F "message=Build Code Ok" https://notify-api.line.me/api/notify'
+                sh 'curl -X POST -H "Authorization: Bearer ${tokenLineF}" -F "message=UAT build Code Ok" https://notify-api.line.me/api/notify'
                
                 
                 
@@ -32,7 +32,7 @@ pipeline {
                 echo 'Testing..'
                 sh 'docker login -u "charat" -p "Do#5898791"'
                 sh '. /home/ec2-user/script/front/dockerPush-front-uat.sh'
-                sh 'curl -X POST -H "Authorization: Bearer ${tokenLineF}" -F "message=Push DockerHub OK" https://notify-api.line.me/api/notify'
+                sh 'curl -X POST -H "Authorization: Bearer ${tokenLineF}" -F "message=UAT push DockerHub OK" https://notify-api.line.me/api/notify'
                
             }
         }
