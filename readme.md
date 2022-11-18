@@ -9,3 +9,6 @@ release 0.3
 
 release 0.4
 jenkinsfile แก้ไขข้อความให้ ติด PROD, UAT หรือ SIT
+
+release 0.5
+go-test jenkinsfile ทดสอบ webhook checkout

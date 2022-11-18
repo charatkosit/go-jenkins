@@ -11,7 +11,15 @@ pipeline {
          stage('prepare') {
             steps {
                 echo 'prepare build'
-                git branch: 'main', url: 'https://github.com/charatkosit/go-template.git'
+                checkout([
+                    $class: 'GitSCM',
+                    branches:[[name: 'main']],
+                    userRemoteConfigs: [[
+                        url: 'git@github.com:charatkosit/go-template.git',
+                        credentialsId: '',
+                    ]]
+                ])
+                // git branch: 'main', url: 'https://github.com/charatkosit/go-template.git'
                 // sh '. /home/ec2-user/script/front/envFrontWithUAT.sh'
                 sh 'curl -X POST -H "Authorization: Bearer ${tokenLineF}" -F "message=Prepare Cohde" https://notify-api.line.me/api/notify'
             }
