@@ -12,3 +12,6 @@ jenkinsfile แก้ไขข้อความให้ ติด PROD, UAT �
 
 release 0.5
 go-test jenkinsfile ทดสอบ webhook checkout
+
+release 0.5.1
+ปรับปรุ่ง code
