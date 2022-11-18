@@ -1,0 +1,45 @@
+pipeline {
+    agent {
+        label 'master'
+    }
+    environment {
+        tokenLineF = 'KU7zIs892MzQrur12rZSsEQCxGyDtHFEWDQiyir87zv'
+
+    }
+    stages {
+        
+         stage('prepare') {
+            steps {
+                echo 'prepare build'
+                git branch: 'main', url: 'https://github.com/charatkosit/go-template.git'
+                sh '. /home/ec2-user/script/front/envFrontWithUAT.sh'
+                sh 'curl -X POST -H "Authorization: Bearer ${tokenLineF}" -F "message=Prepare Cohde" https://notify-api.line.me/api/notify'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                echo 'Build Docker step'
+                sh '. /home/ec2-user/script/front/build-front-uat.sh'
+                sh 'curl -X POST -H "Authorization: Bearer ${tokenLineF}" -F "message=Build Code Ok" https://notify-api.line.me/api/notify'
+               
+                
+                
+            }
+        }
+        stage('Push to DockerHub') {
+            steps {
+                echo 'Testing..'
+                sh 'docker login -u "charat" -p "Do#5898791"'
+                sh '. /home/ec2-user/script/front/dockerPush-front-uat.sh'
+                sh 'curl -X POST -H "Authorization: Bearer ${tokenLineF}" -F "message=Push DockerHub OK" https://notify-api.line.me/api/notify'
+               
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploy..'
+            }
+        }
+    }
+}
