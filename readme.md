@@ -14,4 +14,6 @@ release 0.5
 go-test jenkinsfile ทดสอบ webhook checkout
 
 release 0.5.1
-ปรับปรุ่ง code
+ปรับปรุง code
+
+release 0.6

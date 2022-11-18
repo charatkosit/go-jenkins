@@ -1,6 +1,6 @@
 #!/bin/bash
 #stop container before
-
+docker stop $(docker ps --filter 'ancestor=charat/go-back-prod:latest' --format "{{.ID}}")
 #remove image <none> and  go-back
 docker images
 docker rmi $(docker images go-back-prod --format "{{.ID}}") -f
