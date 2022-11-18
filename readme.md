@@ -17,3 +17,4 @@ release 0.5.1
 ปรับปรุง code
 
 release 0.6
+release 0.7
