@@ -2,7 +2,7 @@
 git clone https://github.com/charatkosit/go-jenkins.git temp 
 
 #remove 
-rm -rf sscript
+rm -rf script
 
 #make dir
 mkdir script

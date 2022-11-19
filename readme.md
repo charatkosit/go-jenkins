@@ -25,3 +25,4 @@ release 0.8.3
 release 0.8.4
 release 0.8.5
 release 0.8.6
+release 0.8.7
