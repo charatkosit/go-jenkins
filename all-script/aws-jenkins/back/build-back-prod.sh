@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 echo "hello"
 tagname=`cat /var/lib/jenkins/workspace/go-back-prod/package.json |grep "version" |cut -d'"' -f 4`
 release=`echo $tagname |cut -d ' ' -f 1`
