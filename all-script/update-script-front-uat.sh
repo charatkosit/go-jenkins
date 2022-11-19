@@ -8,7 +8,7 @@ rm -rf sscript
 mkdir script
 
 #copy new
-cp /home/ec2-user/temp/all-script/aws-back-uat/script/*.* /home/ec2-user/script/
+cp /home/ec2-user/temp/all-script/aws-front-uat/script/*.* /home/ec2-user/script/
 
 #chmod
 chmod +x /home/ec2-user/script/*.*
