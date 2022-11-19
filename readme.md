@@ -30,3 +30,4 @@ release 0.8.8
 release 0.8.9
 release 0.8.10
 release 0.8.11
+release 0.8.12

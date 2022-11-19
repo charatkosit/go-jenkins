@@ -20,5 +20,7 @@ ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 docker-compose version
 
 #env
-# tokenF
-# tokenB
+#AWS-Front:
+tokenLine=K35RgggwSNxmv2UGVT5mGmO5wAwCAuFQuNodqLh5gCG
+#AWS-Back:
+#
