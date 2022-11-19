@@ -6,3 +6,6 @@ docker rm $(docker ps --filter "ancestor=charat/go-template:latest" -aq)
 docker pull charat/go-front-uat:latest
 docker run -p 8000:80 -d charat/go-front-uat:latest
 curl -X POST -H "Authorization: Bearer ${tokenLineAF}" -F "message=UAT deploy new version http://gouat.ddns.net:8000" https://notify-api.line.me/api/notify
+
+#stat containter when system restart
+docker update --restart=always $(docker ps --format "{{.ID}}")
