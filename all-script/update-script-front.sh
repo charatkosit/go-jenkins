@@ -2,8 +2,7 @@
 git clone https://github.com/charatkosit/go-jenkins.git temp 
 
 #remove 
-rm -rf docker-mysql-pma
-rm -rf docker-script
+rm -rf sscript
 
 #make dir
 mkdir script

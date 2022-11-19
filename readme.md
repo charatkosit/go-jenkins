@@ -20,3 +20,4 @@ release 0.6
 release 0.7
 release 0.8
 release 0.8.1
+release 0.8.2
