@@ -15,7 +15,7 @@ cd ..
 #copy
 cp /home/ec2-user/temp/all-script/aws-jenkins/front/*.* /home/ec2-user/script/front/
 cp /home/ec2-user/temp/all-script/aws-jenkins/back/*.* /home/ec2-user/script/back/
-cp /home/ec2-user/temp/all-script/update-aws-jenkins.sh /home/ec2-user/
+#cp /home/ec2-user/temp/all-script/update-aws-jenkins.sh /home/ec2-user/
 
 #chmod
 chmod +x /home/ec2-user/script/front/*.*
