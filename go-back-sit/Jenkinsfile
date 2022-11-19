@@ -41,5 +41,12 @@ pipeline {
                 echo 'Deploy..'
             }
         }
+        stage ('Invoke go-back-uat') {
+            steps {
+                build job: 'go-back-uat', parameters: [
+                string(name: 'param1', value: "value1")
+                ]
+            }
+        }
     }
 }
