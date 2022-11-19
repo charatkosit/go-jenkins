@@ -5,4 +5,4 @@ docker stop $(docker ps --filter "ancestor=charat/go-template:latest" -q)
 docker rm $(docker ps --filter "ancestor=charat/go-template:latest" -aq)
 docker pull charat/go-front-sit:latest
 docker run -p 8000:80 -d charat/go-front-sit:latest
-curl -X POST -H "Authorization: Bearer ${tokenLine}" -F "message=SIT deploy new version http://gosit.ddns.net:8000" https://notify-api.line.me/api/notify
+curl -X POST -H "Authorization: Bearer ${tokenLineAF}" -F "message=SIT deploy new version http://gosit.ddns.net:8000" https://notify-api.line.me/api/notify

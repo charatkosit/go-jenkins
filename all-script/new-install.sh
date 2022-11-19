@@ -21,6 +21,6 @@ docker-compose version
 
 #env
 #AWS-Front:
-tokenLine=K35RgggwSNxmv2UGVT5mGmO5wAwCAuFQuNodqLh5gCG
+tokenLineAF=K35RgggwSNxmv2UGVT5mGmO5wAwCAuFQuNodqLh5gCG
 #AWS-Back:
-#
+tokenLineAB=ImU3zoEwmB44IwAtpeoqPZihzoLld0xUVeSiy1tD1tz
