@@ -13,7 +13,7 @@ pipeline {
                 echo 'prepare build'
                 git branch: 'main', url: 'https://github.com/charatkosit/go-template.git'
                 sh '. /home/ec2-user/script/front/envFrontWithPRD.sh'
-                sh 'curl -X POST -H "Authorization: Bearer ${tokenLineF}" -F "message=PROD prepare Cohde" https://notify-api.line.me/api/notify'
+                sh 'curl -X POST -H "Authorization: Bearer ${tokenLineF}" -F "message=PROD prepare Code OK" https://notify-api.line.me/api/notify'
             }
         }
         

@@ -41,5 +41,12 @@ pipeline {
                 echo 'Deploy..'
             }
         }
+        stage ('Invoke go-front-uat') {
+            steps {
+                build job: 'go-front-uat', parameters: [
+                string(name: 'param1', value: "value1")
+                ]
+            }
+        }
     }
 }
