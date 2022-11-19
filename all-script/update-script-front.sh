@@ -15,3 +15,7 @@ chmod +x /home/ec2-user/script/*.*
 
 #remove temp
 rm -rf temp
+
+# ls
+ls -l
+ls -l script

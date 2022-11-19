@@ -17,3 +17,9 @@ chmod +x /home/ec2-user/script/*.*
 chmod +x /home/ec2-user/docker-mysql-pma/*.*
 #remove temp
 rm -rf temp
+
+# ls
+ls -l
+ls -l script
+ls -l docker-mysql-pma
+
