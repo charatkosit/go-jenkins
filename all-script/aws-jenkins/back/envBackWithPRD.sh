@@ -23,6 +23,8 @@ sed -i -e "s|%dbUsername%|${dbUsername}|g" /var/lib/jenkins/workspace/go-back-pr
 sed -i -e "s|%dbPassword%|${dbPassword}|g" /var/lib/jenkins/workspace/go-back-prod/src/environments/environment.prod.ts
 sed -i -e "s|%dbName%|${dbName}|g" /var/lib/jenkins/workspace/go-back-prod/src/environments/environment.prod.ts
 #sed -i -e "s|false|${synchronize}|g" /var/lib/jenkins/workspace/go-back-prod/src/environments/environment.prod.ts
+#temporary set
+sed -i -e "s|false|true|g" /var/lib/jenkins/workspace/go-back-prod/src/environments/environment.prod.ts
 
 
 sed -i -e "s|%sapUrl%|${sapUrl}|g" /var/lib/jenkins/workspace/go-back-prod/src/environments/environment.prod.ts
