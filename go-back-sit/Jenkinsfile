@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo 'prepare build'
                 git branch: 'main', url: 'https://github.com/charatkosit/go-back.git'
-                sh '. /home/ec2-user/script/back/envBackWithSIT.sh'
+                sh '. /home/ec2-user/script/back/envBackWithSIT-v1.sh'
                 sh 'curl -X POST -H "Authorization: Bearer ${tokenLineB}" -F "message=SIT prepare Code OK" https://notify-api.line.me/api/notify'
             }
         }

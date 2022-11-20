@@ -1,3 +1,4 @@
+release 0.8.26
 release 0.8.25
 release 0.8.24
 release 0.8.23
