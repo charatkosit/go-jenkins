@@ -1,8 +1,8 @@
 #!/bin/bash
-release=`docker images go-back-prod --format {{.Tag}} | head -1`
+releasePBP=`docker images go-back-prod --format {{.Tag}} | head -1`
 
-docker image tag go-back-prod:$release go-back-prod:latest
-docker image tag go-back-prod:$release charat/go-back-prod:$release 
+docker image tag go-back-prod:$releasePBP go-back-prod:latest
+docker image tag go-back-prod:$releasePBP charat/go-back-prod:$releasePBP 
 docker image tag go-back-prod:latest charat/go-back-prod:latest
 docker image push --all-tags charat/go-back-prod
 

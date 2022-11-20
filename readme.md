@@ -1,3 +1,6 @@
+release 0.8.23
+
+
 release 0.1
 รวบรวม  script , docker-compose.yml ของแต่ละ server
 
