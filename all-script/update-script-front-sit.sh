@@ -1,5 +1,5 @@
 !#/bin/bash
-git clone https://github.com/charatkosit/go-jenkins.git temp 
+git clone https://github.com/charatkosit/go-aws-script.git temp 
 
 #remove 
 rm -rf script
@@ -8,7 +8,7 @@ rm -rf script
 mkdir script
 
 #copy new
-cp /home/ec2-user/temp/all-script/aws-front-sit/script/*.* /home/ec2-user/script/
+cp /home/ec2-user/temp/aws-front-sit/script/*.* /home/ec2-user/script/
 
 #chmod
 chmod +x /home/ec2-user/script/*.*

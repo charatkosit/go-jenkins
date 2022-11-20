@@ -1,5 +1,5 @@
 !#/bin/bash
-git clone https://github.com/charatkosit/go-jenkins.git temp 
+git clone https://github.com/charatkosit/go-aws-script.git temp 
 
 #remove 
 rm -rf docker-mysql-pma
@@ -10,8 +10,8 @@ mkdir script
 mkdir docker-mysql-pma
 
 #copy new
-cp /home/ec2-user/temp/all-script/aws-back-uat/script/*.* /home/ec2-user/script/
-cp /home/ec2-user/temp/all-script/aws-back-uat/docker-mysql-pma/*.* /home/ec2-user/docker-mysql-pma/
+cp /home/ec2-user/temp/aws-back-uat/script/*.* /home/ec2-user/script/
+cp /home/ec2-user/temp/aws-back-uat/docker-mysql-pma/*.* /home/ec2-user/docker-mysql-pma/
 #chmod
 chmod +x /home/ec2-user/script/*.*
 chmod +x /home/ec2-user/docker-mysql-pma/*.*
