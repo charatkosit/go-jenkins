@@ -7,7 +7,7 @@ dbPasswordBS='1234'
 dbNameBS='testhaha'
 synchronizeBS=false
 
-tagnameBS=`cat /var/lib/jenkins/workspace/go-front-sit/package.json |grep "version" |cut -d '"' -f 4`
+tagnameBS=`cat /var/lib/jenkins/workspace/go-back-sit/package.json |grep "version" |cut -d '"' -f 4`
 releaseBS=`echo $tagnameBS |cut -d ' ' -f 1`
 
 

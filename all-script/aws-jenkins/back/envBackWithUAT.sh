@@ -7,7 +7,7 @@ dbPasswordBU='1234'
 dbNameBU='testhaha'
 synchronizeBU=false
 
-tagnameBU=`cat /var/lib/jenkins/workspace/go-front-uat/package.json |grep "version" |cut -d '"' -f 4`
+tagnameBU=`cat /var/lib/jenkins/workspace/go-back-uat/package.json |grep "version" |cut -d '"' -f 4`
 releaseBU=`echo $tagnameBU |cut -d ' ' -f 1`
 
 
