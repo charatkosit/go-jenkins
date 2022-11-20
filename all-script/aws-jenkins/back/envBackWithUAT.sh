@@ -2,7 +2,7 @@
 #prepare  data
 dbUrlBU='http://localhost'
 portBU=3308
-dbUsernameBU='root'
+dbUsernameBU='rootUAT'
 dbPasswordBU='1234'
 dbNameBU='testhaha'
 synchronizeBU=false

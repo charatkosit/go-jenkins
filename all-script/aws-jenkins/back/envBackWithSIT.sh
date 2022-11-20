@@ -2,7 +2,7 @@
 #prepare  data
 dbUrlBS='http://localhost'
 portBS=3308
-dbUsernameBS='root'
+dbUsernameBS='rootSIT'
 dbPasswordBS='1234'
 dbNameBS='testhaha'
 synchronizeBS=false
