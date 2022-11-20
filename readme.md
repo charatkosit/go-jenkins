@@ -40,3 +40,4 @@ release 0.8.18
 release 0.8.19
 release 0.8.20
 release 0.8.21
+release 0.8.22
